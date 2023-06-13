@@ -1,0 +1,145 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Flight Landing Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table width="739" border="5" align="center" bordercolor="#FF00FF">
+                               <tr>
+                                   <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Activity_Id</span></div>
+                                   </div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Landing_Airport</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Airline_Name</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Operating_Airline_IATA_Code</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Landing_Date</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Published_Airline</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Published_Airline_IATA_Code</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">GEO_Summary</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">GEO_Region</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Landing_Aircraft_Type</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Aircraft_Body_Type</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Aircraft_Manufacturer</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Aircraft_Model</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Aircraft_Version</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Landing_Count</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Total_Landed_Weight</span></div>
+</div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+  <div align="center"><span class="style8 style6">Prediction</span></div>
+</div></td>
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                       <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Activity_Id}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Landing_Airport}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Airline_Name}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Operating_Airline_IATA_Code}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Landing_Date}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Published_Airline}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Published_Airline_IATA_Code}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.GEO_Summary}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.GEO_Region}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Landing_Aircraft_Type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Aircraft_Body_Type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Aircraft_Manufacturer}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Aircraft_Model}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Aircraft_Version}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Landing_Count}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Total_Landed_Weight}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
